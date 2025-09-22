@@ -1,0 +1,40 @@
+import pandas as pd
+import numpy as np
+import os
+
+file_path = "dataset/covid_dataset.csv"
+
+if not os.path.exists(file_path):
+    raise FileNotFoundError(f"{file_path} not found!")
+
+# Load CSV
+df = pd.read_csv(file_path, parse_dates=["Date"])
+
+# Make sure "Admission" column exists (fallback to "New case" if not)
+if "Admission" not in df.columns:
+    df["Admission"] = df["New case"]
+
+# Clean Admission column (remove commas, spaces, text)
+df["Admission"] = (
+    df["Admission"]
+    .astype(str)                # force text
+    .str.replace(",", "")       # remove commas
+    .str.strip()                # remove spaces
+)
+
+# Convert to numeric
+df["Admission"] = pd.to_numeric(df["Admission"], errors="coerce")
+
+# Drop invalid rows
+df = df.dropna(subset=["Admission"])
+
+# Generate hospital admissions (1%–3% of national cases)
+hospital_fraction = np.random.uniform(0.01, 0.03, size=len(df))
+df["Hospital_Admission"] = (df["Admission"] * hospital_fraction).round().astype(int)
+
+# Save new file
+output_path = "dataset/covid_dataset_with_hospital.csv"
+df.to_csv(output_path, index=False)
+
+print(f"✅ Dataset updated with hospital admissions → {output_path}")
+print(df.head(10))

@@ -1,0 +1,31 @@
+id,name,department,role,grade,skills,max_shifts_per_week,employment_type,preferred_shifts,seniority,specializations
+N1000,Fazira Binti Musa,ICU,ICU Nurse,U29,"{'ICU', 'ICU Nurse'}",5,Contract,Evening,7,{'Ventilator Management'}
+N1001,Arun Raj,GW,Nursing Officer,U41,"{'GW', 'Nursing Officer'}",5,Full-time,Any,17,{'Critical Care'}
+N1002,Devika Rani,ICU,ICU Nurse,U29,"{'ICU', 'ICU Nurse'}",5,Full-time,Any,6,{'Ventilator Management'}
+N1003,Abdul Malik,ICU,ICU Nurse,U41,"{'ICU', 'ICU Nurse'}",3,Part-time,Morning,18,"{'Ventilator Management', 'Critical Care'}"
+N1004,Liew Pei Ying,GW,Senior Staff Nurse,U36,"{'GW', 'Senior Staff Nurse'}",5,Contract,Evening,14,{'Critical Care'}
+N1005,Mohammed Ismail,ED,ED Nurse,U19,"{'ED Nurse', 'ED'}",5,Contract,Any,4,{'Trauma Care'}
+N1006,Tan Siew Ling,ICU,ICU Nurse,U19,"{'ICU', 'ICU Nurse'}",3,Part-time,Night,5,{'Ventilator Management'}
+N1007,Raj Kumar,ICU,ICU Nurse,U36,"{'ICU', 'ICU Nurse'}",5,Part-time,Night,14,"{'Ventilator Management', 'Critical Care'}"
+N1008,Li Wei,GW,Staff Nurse,U29,"{'Staff Nurse', 'GW'}",5,Full-time,Any,6,set()
+N1009,Li Wei,ED,ED Specialist,U48,"{'ED', 'ED Specialist'}",5,Full-time,Evening,23,"{'Trauma Care', 'Critical Care'}"
+N1010,Chong Wei Han,ED,ED Specialist,U44,"{'ED', 'ED Specialist'}",5,Full-time,Night,22,"{'Trauma Care', 'Critical Care'}"
+N1011,Nurul Huda,ED,ED Specialist,U48,"{'ED', 'ED Specialist'}",5,Part-time,Morning,21,"{'Trauma Care', 'Critical Care'}"
+N1012,Manivannan,GW,Staff Nurse,U29,"{'Staff Nurse', 'GW'}",5,Contract,Evening,8,set()
+N1013,Harvinder Kaur,ED,ED Nurse,U36,"{'ED Nurse', 'ED'}",5,Part-time,Morning,13,"{'Trauma Care', 'Critical Care'}"
+N1014,Tan Wei Ming,GW,Nursing Officer,U41,"{'GW', 'Nursing Officer'}",5,Contract,Any,20,{'Critical Care'}
+N1015,Nur Syuhada,ICU,ICU Specialist,U48,"{'ICU Specialist', 'ICU'}",5,Full-time,Morning,23,"{'Ventilator Management', 'Critical Care'}"
+N1016,Yong Mei Hui,ICU,ICU Nurse,U29,"{'ICU', 'ICU Nurse'}",5,Part-time,Night,7,{'Ventilator Management'}
+N1017,Lim Jia Le,ICU,ICU Specialist,U48,"{'ICU Specialist', 'ICU'}",5,Part-time,Night,22,"{'Ventilator Management', 'Critical Care'}"
+N1018,Yong Mei Hui,GW,Assistant Nurse,U19,"{'GW', 'Assistant Nurse'}",3,Part-time,Evening,3,set()
+N1019,Viknesh Kumar,ED,ED Specialist,U48,"{'ED', 'ED Specialist'}",3,Part-time,Evening,25,"{'Trauma Care', 'Critical Care'}"
+N1020,Nisha Kumari,ICU,ICU Nurse,U29,"{'ICU', 'ICU Nurse'}",5,Part-time,Morning,4,{'Ventilator Management'}
+N1021,Wong Siew Mei,ED,ED Nurse,U32,"{'ED Nurse', 'ED'}",5,Part-time,Night,13,"{'Trauma Care', 'Critical Care'}"
+N1022,Tan Jia Wei,ED,ED Specialist,U41,"{'ED', 'ED Specialist'}",5,Contract,Evening,19,"{'Trauma Care', 'Critical Care'}"
+N1023,Subramaniam,ED,ED Nurse,U29,"{'ED Nurse', 'ED'}",5,Contract,Night,7,{'Trauma Care'}
+N1024,Siti Fatimah,ED,ED Specialist,U41,"{'ED', 'ED Specialist'}",3,Part-time,Evening,19,"{'Trauma Care', 'Critical Care'}"
+N1025,Goh Kah Wai,GW,Senior Staff Nurse,U32,"{'GW', 'Senior Staff Nurse'}",5,Contract,Night,9,set()
+N1026,Lim Jun Hao,GW,Senior Staff Nurse,U36,"{'GW', 'Senior Staff Nurse'}",5,Contract,Evening,9,set()
+N1027,Pavithra Devi,GW,Nursing Officer,U41,"{'GW', 'Nursing Officer'}",5,Contract,Night,16,{'Critical Care'}
+N1028,Ng Li Wei,ICU,ICU Nurse,U19,"{'ICU', 'ICU Nurse'}",5,Contract,Evening,5,{'Ventilator Management'}
+N1029,Tang Mei Ling,GW,Assistant Nurse,U19,"{'GW', 'Assistant Nurse'}",5,Contract,Morning,2,set()

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N.U.R.S.E.S. - Nurse Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1><strong>N.U.R.S.E.S.</strong></h1>
+                <p><em>Nurse Unified Roster and Scheduling Efficiency System</em></p>
+            </div>
+
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="nurseId">Employee ID</label>
+                    <input type="text" id="nurseId" placeholder="Enter your ID" autofocus>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                
+                <button type="button" onclick="login()" class="login-button">Sign In</button>
+                
+                <div id="loginResult"></div>
+            </form>
+            
+            <div class="login-footer">
+                <small>Admin Access: N1001, N1015 | Password: ID_Hack</small>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Logging in...</p>
+    </div>
+
+    <script>
+        const API_BASE = '/api';
+
+        function showLoading() {
+            document.getElementById('loading').classList.remove('hidden');
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').classList.add('hidden');
+        }
+
+        function showError(message) {
+            return `<div class="error">❌ ${message}</div>`;
+        }
+
+        async function login() {
+            const nurseId = document.getElementById('nurseId').value.trim();
+            const password = document.getElementById('password').value.trim();
+            
+            if (!nurseId || !password) {
+                document.getElementById('loginResult').innerHTML = showError('Please enter both Nurse ID and password');
+                return;
+            }
+
+            showLoading();
+            try {
+                const response = await fetch(`${API_BASE}/login`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    credentials: 'include',
+                    body: JSON.stringify({nurse_id: nurseId, password: password})
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+                    localStorage.setItem('nurse_data', JSON.stringify(data.nurse));
+                    window.location.href = 'main.html';
+                } else {
+                    document.getElementById('loginResult').innerHTML = showError(data.error);
+                }
+            } catch (error) {
+                document.getElementById('loginResult').innerHTML = showError('Connection failed. Make sure server is running.');
+            }
+            hideLoading();
+        }
+
+        // Allow Enter key to login
+        document.getElementById('nurseId').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                login();
+            }
+        });
+        
+        document.getElementById('password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                login();
+            }
+        });
+    </script>
+</body>
+</html>

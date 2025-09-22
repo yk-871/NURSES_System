@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  nurse-scheduler:
+    build: ..
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - AWS_DEFAULT_REGION=us-east-1
+    volumes:
+      - ../data:/app/data
+      - ../csv:/app/csv
+    restart: unless-stopped

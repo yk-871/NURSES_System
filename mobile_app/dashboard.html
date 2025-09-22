@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>🏥 <span id="nurseName">Nurse</span></h1>
+                <button onclick="logout()" class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <div class="status-card" id="statusCard">
+            <div class="status-info">
+                <h3>Today's Status</h3>
+                <div id="currentStatus">Loading...</div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="checkinBtn" onclick="checkin()" class="action-btn checkin-btn">
+                ⏰ Check In
+            </button>
+            <button id="checkoutBtn" onclick="checkout()" class="action-btn checkout-btn" disabled>
+                🏃 Check Out
+            </button>
+        </div>
+
+        <div id="adminPanel" class="admin-panel hidden">
+            <h3>👑 Admin Panel</h3>
+            <div class="admin-actions">
+                <button onclick="showScheduleGenerator()" class="admin-btn">
+                    📅 Generate Schedule
+                </button>
+                <button onclick="showAttendanceReport()" class="admin-btn">
+                    📊 Attendance Report
+                </button>
+            </div>
+            
+            <div id="scheduleGenerator" class="hidden">
+                <div class="input-group">
+                    <label for="scheduleDays">Schedule Duration:</label>
+                    <select id="scheduleDays">
+                        <option value="7">7 days</option>
+                        <option value="14">14 days</option>
+                    </select>
+                    <button onclick="generateSchedule()">Generate</button>
+                </div>
+            </div>
+            
+            <div id="adminResults"></div>
+        </div>
+
+        <div id="actionResult"></div>
+    </div>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <script>
+        const API_BASE = '/api';
+        let currentUser = null;
+
+        function showLoading() {
+            document.getElementById('loading').classList.remove('hidden');
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').classList.add('hidden');
+        }
+
+        function showError(message) {
+            return `<div class="error">❌ ${message}</div>`;
+        }
+
+        function showSuccess(message) {
+            return `<div class="success">✅ ${message}</div>`;
+        }
+
+        async function loadStatus() {
+            try {
+                const response = await fetch(`${API_BASE}/status`, {
+                    credentials: 'include'
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    currentUser = data;
+                    
+                    document.getElementById('nurseName').textContent = data.nurse_name;
+                    
+                    if (data.is_admin) {
+                        document.getElementById('adminPanel').classList.remove('hidden');
+                    }
+                    
+                    updateStatusDisplay(data);
+                } else {
+                    window.location.href = 'login.html';
+                }
+            } catch (error) {
+                document.getElementById('currentStatus').innerHTML = showError('Connection failed');
+            }
+        }
+
+        function updateStatusDisplay(data) {
+            const status = data.status;
+            const today = data.today;
+            let statusHtml = '';
+
+            if (status === 'checked_in') {
+                statusHtml = `
+                    <div class="status-active">
+                        ✅ Checked In at ${today.checkin}
+                    </div>
+                `;
+                document.getElementById('checkinBtn').disabled = true;
+                document.getElementById('checkoutBtn').disabled = false;
+            } else if (status === 'checked_out') {
+                statusHtml = `
+                    <div class="status-complete">
+                        ✅ Checked In: ${today.checkin}<br>
+                        🏃 Checked Out: ${today.checkout}<br>
+                        ⏱️ Hours Worked: ${today.hours_worked}
+                    </div>
+                `;
+                document.getElementById('checkinBtn').disabled = true;
+                document.getElementById('checkoutBtn').disabled = true;
+            } else {
+                statusHtml = `<div class="status-pending">⏳ Not checked in today</div>`;
+                document.getElementById('checkinBtn').disabled = false;
+                document.getElementById('checkoutBtn').disabled = true;
+            }
+
+            document.getElementById('currentStatus').innerHTML = statusHtml;
+        }
+
+        async function checkin() {
+            showLoading();
+            try {
+                const response = await fetch(`${API_BASE}/checkin`, {
+                    method: 'POST',
+                    credentials: 'include'
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    document.getElementById('actionResult').innerHTML = showSuccess(data.message);
+                    loadStatus();
+                } else {
+                    document.getElementById('actionResult').innerHTML = showError(data.error);
+                }
+            } catch (error) {
+                document.getElementById('actionResult').innerHTML = showError('Connection failed');
+            }
+            hideLoading();
+        }
+
+        async function checkout() {
+            showLoading();
+            try {
+                const response = await fetch(`${API_BASE}/checkout`, {
+                    method: 'POST',
+                    credentials: 'include'
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    document.getElementById('actionResult').innerHTML = showSuccess(
+                        `${data.message}<br>Hours worked: ${data.hours_worked}`
+                    );
+                    loadStatus();
+                } else {
+                    document.getElementById('actionResult').innerHTML = showError(data.error);
+                }
+            } catch (error) {
+                document.getElementById('actionResult').innerHTML = showError('Connection failed');
+            }
+            hideLoading();
+        }
+
+        function showScheduleGenerator() {
+            document.getElementById('scheduleGenerator').classList.toggle('hidden');
+        }
+
+        async function generateSchedule() {
+            const days = document.getElementById('scheduleDays').value;
+            
+            showLoading();
+            try {
+                const response = await fetch(`${API_BASE}/schedule`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    credentials: 'include',
+                    body: JSON.stringify({days: parseInt(days)})
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    document.getElementById('adminResults').innerHTML = showSuccess(
+                        `Schedule generated for ${Object.keys(data.schedule).length} nurses`
+                    );
+                } else {
+                    document.getElementById('adminResults').innerHTML = showError(data.error);
+                }
+            } catch (error) {
+                document.getElementById('adminResults').innerHTML = showError('Connection failed');
+            }
+            hideLoading();
+        }
+
+        async function showAttendanceReport() {
+            showLoading();
+            try {
+                const response = await fetch(`${API_BASE}/attendance/report`, {
+                    credentials: 'include'
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    const attendanceCount = Object.keys(data.attendance).length;
+                    document.getElementById('adminResults').innerHTML = showSuccess(
+                        `Attendance records for ${attendanceCount} nurses loaded`
+                    );
+                } else {
+                    document.getElementById('adminResults').innerHTML = showError(data.error);
+                }
+            } catch (error) {
+                document.getElementById('adminResults').innerHTML = showError('Connection failed');
+            }
+            hideLoading();
+        }
+
+        async function logout() {
+            try {
+                await fetch(`${API_BASE}/logout`, {
+                    method: 'POST',
+                    credentials: 'include'
+                });
+            } catch (error) {
+                console.log('Logout error:', error);
+            }
+            
+            localStorage.removeItem('nurse_data');
+            window.location.href = 'login.html';
+        }
+
+        // Load status on page load
+        window.onload = loadStatus;
+    </script>
+</body>
+</html>

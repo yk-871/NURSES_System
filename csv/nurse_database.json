@@ -1,0 +1,542 @@
+[
+    {
+        "id": "N1000",
+        "name": "Fazira Binti Musa",
+        "department": "ICU",
+        "role": "ICU Nurse",
+        "grade": "U29",
+        "skills": [
+            "ICU",
+            "ICU Nurse"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Evening",
+        "seniority": 7,
+        "specializations": [
+            "Ventilator Management"
+        ]
+    },
+    {
+        "id": "N1001",
+        "name": "Arun Raj",
+        "department": "GW",
+        "role": "Nursing Officer",
+        "grade": "U41",
+        "skills": [
+            "GW",
+            "Nursing Officer"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Full-time",
+        "preferred_shifts": "Any",
+        "seniority": 17,
+        "specializations": [
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1002",
+        "name": "Devika Rani",
+        "department": "ICU",
+        "role": "ICU Nurse",
+        "grade": "U29",
+        "skills": [
+            "ICU",
+            "ICU Nurse"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Full-time",
+        "preferred_shifts": "Any",
+        "seniority": 6,
+        "specializations": [
+            "Ventilator Management"
+        ]
+    },
+    {
+        "id": "N1003",
+        "name": "Abdul Malik",
+        "department": "ICU",
+        "role": "ICU Nurse",
+        "grade": "U41",
+        "skills": [
+            "ICU",
+            "ICU Nurse"
+        ],
+        "max_shifts_per_week": 3,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Morning",
+        "seniority": 18,
+        "specializations": [
+            "Ventilator Management",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1004",
+        "name": "Liew Pei Ying",
+        "department": "GW",
+        "role": "Senior Staff Nurse",
+        "grade": "U36",
+        "skills": [
+            "GW",
+            "Senior Staff Nurse"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Evening",
+        "seniority": 14,
+        "specializations": [
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1005",
+        "name": "Mohammed Ismail",
+        "department": "ED",
+        "role": "ED Nurse",
+        "grade": "U19",
+        "skills": [
+            "ED Nurse",
+            "ED"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Any",
+        "seniority": 4,
+        "specializations": [
+            "Trauma Care"
+        ]
+    },
+    {
+        "id": "N1006",
+        "name": "Tan Siew Ling",
+        "department": "ICU",
+        "role": "ICU Nurse",
+        "grade": "U19",
+        "skills": [
+            "ICU",
+            "ICU Nurse"
+        ],
+        "max_shifts_per_week": 3,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Night",
+        "seniority": 5,
+        "specializations": [
+            "Ventilator Management"
+        ]
+    },
+    {
+        "id": "N1007",
+        "name": "Raj Kumar",
+        "department": "ICU",
+        "role": "ICU Nurse",
+        "grade": "U36",
+        "skills": [
+            "ICU",
+            "ICU Nurse"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Night",
+        "seniority": 14,
+        "specializations": [
+            "Ventilator Management",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1008",
+        "name": "Li Wei",
+        "department": "GW",
+        "role": "Staff Nurse",
+        "grade": "U29",
+        "skills": [
+            "Staff Nurse",
+            "GW"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Full-time",
+        "preferred_shifts": "Any",
+        "seniority": 6,
+        "specializations": []
+    },
+    {
+        "id": "N1009",
+        "name": "Li Wei",
+        "department": "ED",
+        "role": "ED Specialist",
+        "grade": "U48",
+        "skills": [
+            "ED",
+            "ED Specialist"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Full-time",
+        "preferred_shifts": "Evening",
+        "seniority": 23,
+        "specializations": [
+            "Trauma Care",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1010",
+        "name": "Chong Wei Han",
+        "department": "ED",
+        "role": "ED Specialist",
+        "grade": "U44",
+        "skills": [
+            "ED",
+            "ED Specialist"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Full-time",
+        "preferred_shifts": "Night",
+        "seniority": 22,
+        "specializations": [
+            "Trauma Care",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1011",
+        "name": "Nurul Huda",
+        "department": "ED",
+        "role": "ED Specialist",
+        "grade": "U48",
+        "skills": [
+            "ED",
+            "ED Specialist"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Morning",
+        "seniority": 21,
+        "specializations": [
+            "Trauma Care",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1012",
+        "name": "Manivannan",
+        "department": "GW",
+        "role": "Staff Nurse",
+        "grade": "U29",
+        "skills": [
+            "Staff Nurse",
+            "GW"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Evening",
+        "seniority": 8,
+        "specializations": []
+    },
+    {
+        "id": "N1013",
+        "name": "Harvinder Kaur",
+        "department": "ED",
+        "role": "ED Nurse",
+        "grade": "U36",
+        "skills": [
+            "ED Nurse",
+            "ED"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Morning",
+        "seniority": 13,
+        "specializations": [
+            "Trauma Care",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1014",
+        "name": "Tan Wei Ming",
+        "department": "GW",
+        "role": "Nursing Officer",
+        "grade": "U41",
+        "skills": [
+            "GW",
+            "Nursing Officer"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Any",
+        "seniority": 20,
+        "specializations": [
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1015",
+        "name": "Nur Syuhada",
+        "department": "ICU",
+        "role": "ICU Specialist",
+        "grade": "U48",
+        "skills": [
+            "ICU Specialist",
+            "ICU"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Full-time",
+        "preferred_shifts": "Morning",
+        "seniority": 23,
+        "specializations": [
+            "Ventilator Management",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1016",
+        "name": "Yong Mei Hui",
+        "department": "ICU",
+        "role": "ICU Nurse",
+        "grade": "U29",
+        "skills": [
+            "ICU",
+            "ICU Nurse"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Night",
+        "seniority": 7,
+        "specializations": [
+            "Ventilator Management"
+        ]
+    },
+    {
+        "id": "N1017",
+        "name": "Lim Jia Le",
+        "department": "ICU",
+        "role": "ICU Specialist",
+        "grade": "U48",
+        "skills": [
+            "ICU Specialist",
+            "ICU"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Night",
+        "seniority": 22,
+        "specializations": [
+            "Ventilator Management",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1018",
+        "name": "Sarah Ahmad",
+        "department": "GW",
+        "role": "Assistant Nurse",
+        "grade": "U19",
+        "skills": [
+            "GW",
+            "Assistant Nurse"
+        ],
+        "max_shifts_per_week": 3,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Evening",
+        "seniority": 3,
+        "specializations": []
+    },
+    {
+        "id": "N1019",
+        "name": "Viknesh Kumar",
+        "department": "ED",
+        "role": "ED Specialist",
+        "grade": "U48",
+        "skills": [
+            "ED",
+            "ED Specialist"
+        ],
+        "max_shifts_per_week": 3,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Evening",
+        "seniority": 25,
+        "specializations": [
+            "Trauma Care",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1020",
+        "name": "Nisha Kumari",
+        "department": "ICU",
+        "role": "ICU Nurse",
+        "grade": "U29",
+        "skills": [
+            "ICU",
+            "ICU Nurse"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Morning",
+        "seniority": 4,
+        "specializations": [
+            "Ventilator Management"
+        ]
+    },
+    {
+        "id": "N1021",
+        "name": "Wong Siew Mei",
+        "department": "ED",
+        "role": "ED Nurse",
+        "grade": "U32",
+        "skills": [
+            "ED Nurse",
+            "ED"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Night",
+        "seniority": 13,
+        "specializations": [
+            "Trauma Care",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1022",
+        "name": "Tan Jia Wei",
+        "department": "ED",
+        "role": "ED Specialist",
+        "grade": "U41",
+        "skills": [
+            "ED",
+            "ED Specialist"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Evening",
+        "seniority": 19,
+        "specializations": [
+            "Trauma Care",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1023",
+        "name": "Subramaniam",
+        "department": "ED",
+        "role": "ED Nurse",
+        "grade": "U29",
+        "skills": [
+            "ED Nurse",
+            "ED"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Night",
+        "seniority": 7,
+        "specializations": [
+            "Trauma Care"
+        ]
+    },
+    {
+        "id": "N1024",
+        "name": "Siti Fatimah",
+        "department": "ED",
+        "role": "ED Specialist",
+        "grade": "U41",
+        "skills": [
+            "ED",
+            "ED Specialist"
+        ],
+        "max_shifts_per_week": 3,
+        "employment_type": "Part-time",
+        "preferred_shifts": "Evening",
+        "seniority": 19,
+        "specializations": [
+            "Trauma Care",
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1025",
+        "name": "Goh Kah Wai",
+        "department": "GW",
+        "role": "Senior Staff Nurse",
+        "grade": "U32",
+        "skills": [
+            "GW",
+            "Senior Staff Nurse"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Night",
+        "seniority": 9,
+        "specializations": []
+    },
+    {
+        "id": "N1026",
+        "name": "Lim Jun Hao",
+        "department": "GW",
+        "role": "Senior Staff Nurse",
+        "grade": "U36",
+        "skills": [
+            "GW",
+            "Senior Staff Nurse"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Evening",
+        "seniority": 9,
+        "specializations": []
+    },
+    {
+        "id": "N1027",
+        "name": "Pavithra Devi",
+        "department": "GW",
+        "role": "Nursing Officer",
+        "grade": "U41",
+        "skills": [
+            "GW",
+            "Nursing Officer"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Night",
+        "seniority": 16,
+        "specializations": [
+            "Critical Care"
+        ]
+    },
+    {
+        "id": "N1028",
+        "name": "Ng Li Wei",
+        "department": "ICU",
+        "role": "ICU Nurse",
+        "grade": "U19",
+        "skills": [
+            "ICU",
+            "ICU Nurse"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Evening",
+        "seniority": 5,
+        "specializations": [
+            "Ventilator Management"
+        ]
+    },
+    {
+        "id": "N1029",
+        "name": "Tang Mei Ling",
+        "department": "GW",
+        "role": "Assistant Nurse",
+        "grade": "U19",
+        "skills": [
+            "GW",
+            "Assistant Nurse"
+        ],
+        "max_shifts_per_week": 5,
+        "employment_type": "Contract",
+        "preferred_shifts": "Morning",
+        "seniority": 2,
+        "specializations": []
+    }
+]

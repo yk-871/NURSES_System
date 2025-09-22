@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse App</title>
+    <link rel="stylesheet" href="instagram-style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1>🏥 <span id="nurseName">Nurse</span></h1>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Home Panel -->
+            <div id="home" class="panel active">
+                <h2 class="home-title">🏠 Home Dashboard</h2>
+                <div class="status-card">
+                    <h3>Today's Status</h3>
+                    <div id="currentStatus">Loading...</div>
+                </div>
+                
+                <div class="quick-actions">
+                    <button id="checkinBtn" onclick="checkin()" class="quick-btn checkin">
+                        ⏰ Check In
+                    </button>
+                    <button id="checkoutBtn" onclick="checkout()" class="quick-btn checkout" disabled>
+                        🏃 Check Out
+                    </button>
+                </div>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">📅</div>
+                        <div class="info-content">
+                            <h4>View Schedule</h4>
+                            <p>Check your weekly assignments in the Schedule tab</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">🤖</div>
+                        <div class="info-content">
+                            <h4>AI Assistant</h4>
+                            <p>Ask about schedules, submit MC, or get help in Chat</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">🚨</div>
+                        <div class="info-content">
+                            <h4>Emergency</h4>
+                            <p>Quick access to emergency calls and protocols</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Chatbot Panel -->
+            <div id="chatbot" class="panel">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h3>🤖 Nurse Assistant</h3>
+                    </div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="bot-message">
+                            Hi! I'm your nurse assistant. Ask me about:
+                            <br>• Schedule information ("my schedule")
+                            <br>• MC submissions ("submit mc")
+                            <br>• Ward protocols
+                            <br>• Emergency procedures
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Ask me anything...">
+                        <button onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Panel -->
+            <div id="emergency" class="panel">
+                <div class="emergency-container">
+                    <div class="emergency-header">
+                        <h3>🚨 Emergency Call</h3>
+                    </div>
+                    <div class="emergency-content">
+                        <div class="emergency-buttons">
+                            <button onclick="sendEmergencyCall('medical')" class="emergency-btn medical">
+                                <span class="emergency-icon">🏥</span>
+                                <span class="emergency-text">Medical Emergency</span>
+                            </button>
+                            <button onclick="sendEmergencyCall('security')" class="emergency-btn security">
+                                <span class="emergency-icon">🔒</span>
+                                <span class="emergency-text">Security Alert</span>
+                            </button>
+                            <button onclick="sendEmergencyCall('fire')" class="emergency-btn fire">
+                                <span class="emergency-icon">🔥</span>
+                                <span class="emergency-text">Fire Emergency</span>
+                            </button>
+                            <button onclick="sendEmergencyCall('help')" class="emergency-btn help">
+                                <span class="emergency-icon">🆘</span>
+                                <span class="emergency-text">Need Help</span>
+                            </button>
+                        </div>
+                        <div id="emergencyStatus" class="emergency-status"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schedule Panel -->
+            <div id="schedule" class="panel">
+                <div class="schedule-container">
+                    <div class="schedule-header">
+                        <h3>📅 My Schedule</h3>
+                        <button onclick="loadMySchedule()" class="refresh-btn">🔄</button>
+                    </div>
+                    <div id="fullSchedule" class="schedule-content">
+                        <div class="pending-state">
+                            <div class="pending-icon">⏳</div>
+                            <h4>Schedule Pending</h4>
+                            <p>No schedule data available yet. Please contact admin to generate schedules.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Panel -->
+            <div id="dashboard" class="panel">
+                <div class="dashboard-container">
+                    <h3>📊 Dashboard</h3>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>This Week</h4>
+                            <div class="stat-value" id="weekHours">0h</div>
+                            <div class="stat-label">Hours Worked</div>
+                        </div>
+                        <div class="stat-card">
+                            <h4>This Month</h4>
+                            <div class="stat-value" id="monthShifts">0</div>
+                            <div class="stat-label">Shifts</div>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Attendance</h4>
+                            <div class="stat-value" id="attendance">100%</div>
+                            <div class="stat-label">Rate</div>
+                        </div>
+                    </div>
+                    
+
+
+                    <div id="adminPanel" class="admin-section hidden">
+                        <h4>👑 Admin Controls</h4>
+                        <div class="admin-actions">
+                            <button onclick="generateSchedule()" class="admin-btn">📊 Generate Schedule</button>
+                        </div>
+                        
+                        <div id="uploadSection" class="upload-section hidden">
+                            <div class="upload-form-inline">
+                                <input type="file" id="admissionFile" accept=".csv,.xlsx,.xls" class="file-input">
+                            </div>
+                            <div class="upload-buttons">
+                                <button onclick="submitFileUpload()" class="generate-btn">🚀 Generate</button>
+                                <button onclick="cancelScheduleGeneration()" class="cancel-btn">Cancel</button>
+                            </div>
+                            <small class="upload-hint">Upload CSV/Excel file with admission data</small>
+                        </div>
+                        
+                        <div class="admin-actions">
+                            <button onclick="viewFullSchedule()" class="admin-btn">📅 View Full Schedule</button>
+                            <button onclick="viewEmergencyCalls()" class="admin-btn">🚨 Emergency Calls</button>
+                        </div>
+                        <div class="s3-actions">
+                            <h5>☁️ Cloud Data Management</h5>
+                            <button onclick="restoreFromS3()" class="s3-btn restore-btn">📥 Fetch from S3</button>
+                            <button onclick="backupToS3()" class="s3-btn backup-btn">📤 Backup to S3</button>
+                            <button onclick="resetData()" class="s3-btn reset-btn">🔄 Reset Data</button>
+                        </div>
+                        <div id="adminResults"></div>
+                        <div id="scheduleResults"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-btn active" onclick="showPanel('home')">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+            </button>
+            <button class="nav-btn" onclick="showPanel('chatbot')">
+                <span class="nav-icon">🤖</span>
+                <span class="nav-label">Chat</span>
+            </button>
+            <button class="nav-btn" onclick="showPanel('emergency')">
+                <span class="nav-icon">🚨</span>
+                <span class="nav-label">Emergency</span>
+            </button>
+            <button class="nav-btn" onclick="showPanel('schedule')">
+                <span class="nav-icon">📅</span>
+                <span class="nav-label">Schedule</span>
+            </button>
+            <button class="nav-btn" onclick="showPanel('dashboard')">
+                <span class="nav-icon">📊</span>
+                <span class="nav-label">Dashboard</span>
+            </button>
+        </nav>
+    </div>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <script src="instagram-app.js"></script>
+</body>
+</html>

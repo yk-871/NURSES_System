@@ -1,0 +1,31 @@
+Unnamed: 0,Nurse_ID,Name,Monday 2025-10-20 Morning,Monday 2025-10-20 Evening,Monday 2025-10-20 Night,Tuesday 2025-10-21 Morning,Tuesday 2025-10-21 Evening,Tuesday 2025-10-21 Night,Wednesday 2025-10-22 Morning,Wednesday 2025-10-22 Evening,Wednesday 2025-10-22 Night,Thursday 2025-10-23 Morning,Thursday 2025-10-23 Evening,Thursday 2025-10-23 Night,Friday 2025-10-24 Morning,Friday 2025-10-24 Evening,Friday 2025-10-24 Night,Saturday 2025-10-25 Morning,Saturday 2025-10-25 Evening,Saturday 2025-10-25 Night,Sunday 2025-10-26 Morning,Sunday 2025-10-26 Evening,Sunday 2025-10-26 Night
+Fazira Binti Musa,N1000,Fazira Binti Musa,Off,Off,On Duty - ICU,Off,Off,Off,Off,Off,On Duty - ICU,Off,Off,On Duty - ICU,Off,Off,Off,Off,On Duty - ICU,Off,On Duty - ICU,Off,Off
+Arun Raj,N1001,Arun Raj,On Duty - GW,Off,Off,On Duty - GW,Off,Off,Off,Off,Off,Off,Off,On Duty - GW,Off,Off,Off,On Duty - GW,Off,Off,Off,Off,On Duty - GW
+Devika Rani,N1002,Devika Rani,On Duty - ICU,Off,Off,On Duty - ICU,Off,Off,Off,Off,Off,Off,Off,On Duty - ICU,Off,On Duty - ICU,Off,Off,Off,Off,Off,On Duty - ICU,Off
+Abdul Malik,N1003,Abdul Malik,Off,On Duty - ICU,Off,Off,Off,Off,Off,Off,Off,Off,Off,Off,Off,Off,On Duty - ICU,Off,On Duty - ICU,Off,Off,Off,Off
+Liew Pei Ying,N1004,Liew Pei Ying,Off,On Duty - GW,Off,Off,Off,Off,On Duty - GW,Off,Off,On Duty - GW,Off,Off,Off,Off,On Duty - GW,Off,Off,On Duty - GW,Off,Off,Off
+Mohammed Ismail,N1005,Mohammed Ismail,Off,Off,On Duty - ED,Off,Off,On Duty - ED,Off,Off,Off,On Duty - ED,Off,Off,Off,Off,On Duty - ED,Off,Off,On Duty - ED,Off,Off,Off
+Tan Siew Ling,N1006,Tan Siew Ling,Off,Off,Off,Off,Off,Off,Off,Off,Off,On Duty - ICU,Off,Off,Off,On Duty - ICU,Off,Off,Off,On Duty - ICU,Off,Off,Off
+Raj Kumar,N1007,Raj Kumar,Off,Off,Off,Off,Off,Off,On Duty - ICU,Off,Off,Off,On Duty - ICU,Off,On Duty - ICU,Off,Off,Off,Off,On Duty - ICU,Off,Off,On Duty - ICU
+Li Wei,N1008,Li Wei,Off,On Duty - GW,Off,Off,Off,On Duty - GW,Off,Off,On Duty - GW,Off,Off,On Duty - GW,Off,Off,Off,Off,Off,Off,On Duty - GW,Off,Off
+Li Wei,N1009,Li Wei,Off,On Duty - ED,Off,On Duty - ED,Off,Off,Off,On Duty - ED,Off,Off,Off,Off,Off,Off,Off,Off,On Duty - ED,Off,On Duty - ED,Off,Off
+Chong Wei Han,N1010,Chong Wei Han,Off,Off,On Duty - ED,Off,On Duty - ED,Off,Off,Off,Off,Off,On Duty - ED,Off,On Duty - ED,Off,Off,Off,Off,Off,Off,Off,On Duty - ED
+Nurul Huda,N1011,Nurul Huda,Off,Off,Off,Off,Off,Off,Off,On Duty - ED,Off,Off,Off,On Duty - ED,Off,On Duty - ED,Off,Off,Off,On Duty - ED,Off,On Duty - ED,Off
+Manivannan,N1012,Manivannan,Off,Off,Off,On Duty - GW,Off,Off,Off,Off,On Duty - GW,Off,Off,Off,Off,Off,On Duty - GW,Off,On Duty - GW,Off,Off,Off,On Duty - GW
+Harvinder Kaur,N1013,Harvinder Kaur,On Duty - ED,Off,Off,Off,On Duty - ED,Off,Off,Off,Off,On Duty - ED,Off,Off,Off,Off,Off,On Duty - ED,Off,Off,On Duty - ED,Off,Off
+Tan Wei Ming,N1014,Tan Wei Ming,Off,Off,Off,Off,Off,Off,On Duty - GW,Off,Off,Off,On Duty - GW,Off,Off,On Duty - GW,Off,Off,On Duty - GW,Off,On Duty - GW,Off,Off
+Nur Syuhada,N1015,Nur Syuhada,Off,Off,Off,Off,Off,On Duty - ICU,Off,On Duty - ICU,Off,Off,Off,On Duty - ICU,Off,Off,On Duty - ICU,Off,On Duty - ICU,Off,Off,Off,Off
+Yong Mei Hui,N1016,Yong Mei Hui,Off,Off,Off,Off,Off,On Duty - ICU,Off,On Duty - ICU,Off,Off,On Duty - ICU,Off,Off,Off,Off,On Duty - ICU,Off,Off,On Duty - ICU,Off,Off
+Lim Jia Le,N1017,Lim Jia Le,On Duty - ICU,Off,Off,Off,On Duty - ICU,Off,Off,Off,Off,On Duty - ICU,Off,Off,On Duty - ICU,Off,Off,Off,Off,Off,Off,On Duty - ICU,Off
+Sarah Ahmad,N1018,Sarah Ahmad,On Duty - GW,Off,Off,Off,Off,Off,Off,Off,On Duty - GW,Off,Off,Off,Off,Off,Off,On Duty - GW,Off,Off,Off,Off,Off
+Viknesh Kumar,N1019,Viknesh Kumar,Off,Off,Off,Off,Off,Off,Off,Off,On Duty - ED,Off,Off,On Duty - ED,Off,Off,Off,Off,Off,Off,Off,Off,On Duty - ED
+Nisha Kumari,N1020,Nisha Kumari,Off,Off,On Duty - ICU,Off,On Duty - ICU,Off,On Duty - ICU,Off,Off,Off,Off,Off,Off,Off,Off,Off,On Duty - ICU,Off,Off,Off,On Duty - ICU
+Wong Siew Mei,N1021,Wong Siew Mei,Off,Off,Off,On Duty - ED,Off,Off,On Duty - ED,Off,Off,Off,On Duty - ED,Off,Off,On Duty - ED,Off,Off,Off,Off,Off,On Duty - ED,Off
+Tan Jia Wei,N1022,Tan Jia Wei,On Duty - ED,Off,Off,On Duty - ED,Off,Off,On Duty - ED,Off,Off,Off,Off,Off,Off,Off,Off,On Duty - ED,Off,Off,On Duty - ED,Off,Off
+Subramaniam,N1023,Subramaniam,On Duty - ED,Off,Off,Off,Off,On Duty - ED,Off,Off,Off,Off,On Duty - ED,Off,Off,Off,On Duty - ED,Off,On Duty - ED,Off,Off,Off,Off
+Siti Fatimah,N1024,Siti Fatimah,Off,On Duty - ED,Off,Off,Off,Off,Off,Off,On Duty - ED,Off,Off,Off,On Duty - ED,Off,Off,Off,Off,Off,Off,Off,Off
+Goh Kah Wai,N1025,Goh Kah Wai,Off,Off,Off,Off,On Duty - GW,Off,Off,Off,Off,Off,Off,On Duty - GW,Off,Off,On Duty - GW,Off,Off,On Duty - GW,Off,On Duty - GW,Off
+Lim Jun Hao,N1026,Lim Jun Hao,Off,Off,On Duty - GW,Off,Off,On Duty - GW,Off,Off,Off,Off,On Duty - GW,Off,On Duty - GW,Off,Off,Off,On Duty - GW,Off,Off,Off,Off
+Pavithra Devi,N1027,Pavithra Devi,Off,Off,On Duty - GW,Off,On Duty - GW,Off,Off,On Duty - GW,Off,Off,Off,Off,Off,On Duty - GW,Off,Off,Off,Off,Off,On Duty - GW,Off
+Ng Li Wei,N1028,Ng Li Wei,Off,On Duty - ICU,Off,On Duty - ICU,Off,Off,Off,Off,On Duty - ICU,Off,Off,Off,On Duty - ICU,Off,Off,On Duty - ICU,Off,Off,Off,Off,Off
+Tang Mei Ling,N1029,Tang Mei Ling,Off,Off,Off,Off,Off,Off,Off,On Duty - GW,Off,On Duty - GW,Off,Off,On Duty - GW,Off,Off,On Duty - GW,Off,Off,On Duty - GW,Off,Off
